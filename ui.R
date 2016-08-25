@@ -21,7 +21,9 @@ shinyUI(pageWithSidebar(
   
   sliderInput("n2", "width of plot", value=250, min=200, max=400),
   
-  sliderInput("n3", "height of plot", value=250, min=200, max=400)
+  sliderInput("n3", "height of plot", value=250, min=200, max=400),
+  h6("This is small app, which changes plot dimensions based on user given values and also dot location. When calculating dot location app takes into account user given value.", align = "center"), 
+  h6("For example value 2 means location x = 2, y = 2. App then randomizes final location for dot by summing number between 1 to 5 to user given x and y values. Any change to slidebars also causes recalculation for generated plot", align = "center")
 ),
   
   mainPanel(
